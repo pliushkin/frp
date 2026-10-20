@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRP Bypass Easy Hub 2026</title>
+    <style>
+        :root {
+            --bg-color: #121214;
+            --card-bg: #1e1e24;
+            --text-color: #e2e8f0;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-orange: #f59e0b;
+            --accent-purple: #8b5cf6;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+        .category {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3);
+        }
+        .category-title {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 6px;
+        }
+        .btn {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            padding: 12px 10px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: opacity 0.2s;
+        }
+        .btn:last-child { margin-bottom: 0; }
+        .btn:active { opacity: 0.7; }
+        
+        /* Цвета кнопок для удобства ориентирования */
+        .btn-blue { background-color: var(--accent-blue); }
+        .btn-green { background-color: var(--accent-green); }
+        .btn-orange { background-color: var(--accent-orange); }
+        .btn-purple { background-color: var(--accent-purple); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>FRP Bypass Service Hub</h1>
+    <div class="subtitle">Использовать строго через встроенный браузер заблокированного Android</div>
+
+    <!-- 1. СИСТЕМНЫЕ НАСТРОЙКИ -->
+    <div class="category">
+        <div class="category-title" style="color: var(--accent-blue);">⚙️ Системные настройки (Android OS)</div>
+        <a class="btn btn-blue" href="intent:#Intent;action=android.settings.SETTINGS;end">⚙️ Главные настройки телефона</a>
+        <a class="btn btn-blue" href="intent:#Intent;action=android.settings.WIFI_SETTINGS;end">🌐 Настройки Wi-Fi</a>
+        <a class="btn btn-blue" href="intent:#Intent;action=android.settings.APPLICATION_SETTINGS;end">🤖 Диспетчер приложений</a>
+        <a class="btn btn-blue" href="intent:#Intent;action=android.settings.BIOMETRIC_ENROLL;end">🔒 Добавить отпечаток / лицо</a>
+    </div>
+
+    <!-- 2. ВСТРОЕННЫЕ МАГАЗИНЫ БРЕНДОВ -->
+    <div class="category">
+        <div class="category-title" style="color: var(--accent-orange);">🛍️ Запуск Фирменных Магазинов</div>
+        <a class="btn btn-orange" href="intent:#Intent;action=android.intent.action.VIEW;data=mimarket://home;end">📱 Xiaomi GetApps (Главная)</a>
+        <a class="btn btn-orange" href="intent:#Intent;action=android.intent.action.VIEW;data=samsungapps://mcs/main;end">Galaxy Store (Samsung)</a>
+        <a class="btn btn-orange" href="intent:#Intent;action=android.intent.action.VIEW;data=appmarket://hp;end">Oppo / RealMe App Market</a>
+        <a class="btn btn-orange" href="intent:#Intent;action=android.intent.action.VIEW;data=hiapp://com.huawei.appmarket;end">Huawei AppGallery</a>
+    </div>
+
+    <!-- 3. СКАЧИВАНИЕ НУЖНОГО СОФТА В ОДИН КЛИК -->
+    <div class="category">
+        <div class="category-title" style="color: var(--accent-green);">🚀 Прямой поиск софта в магазинах</div>
+        <!-- Xiaomi GetApps Поиск -->
+        <a class="btn btn-green" href="intent:#Intent;action=android.intent.action.VIEW;data=mimarket://details?id=de.szalkowski.activitylauncher;end">🔎 Activity Launcher в GetApps</a>
+        <!-- Samsung Galaxy Store Поиск -->
+        <a class="btn btn-green" href="intent:#Intent;action=android.intent.action.VIEW;data=samsungapps://ProductDetail/de.szalkowski.activitylauncher;end">🔎 Activity Launcher в Galaxy Store</a>
+        <a class="btn btn-green" href="intent:#Intent;action=android.intent.action.VIEW;data=samsungapps://ProductDetail/com.alliance.shield;end">🔎 Alliance Shield в Galaxy Store</a>
+    </div>
+
+    <!-- 4. СКРЫТЫЕ СЕРВИСЫ GOOGLE -->
+    <div class="category">
+        <div class="category-title" style="color: var(--accent-purple);">🛡️ Обходные экраны безопасности</div>
+        <a class="btn btn-purple" href="intent:#Intent;action=com.google.android.gms.settings.SCREEN_LOCK_TYPE;end">🔑 Смена типа блокировки (Smart Lock)</a>
+        <a class="btn btn-purple" href="intent:#Intent;action=android.intent.action.VIEW;data=https://google.com;end">🌐 Открыть чистый Google.com</a>
+        <a class="btn btn-purple" href="intent:#Intent;action=android.provider.Settings.ACTION_USER_DICTIONARY_SETTINGS;end">📝 Словарь клавиатуры (вход через поиск)</a>
+    </div>
+</div>
+
+</body>
+</html>
